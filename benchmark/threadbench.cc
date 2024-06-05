@@ -380,8 +380,6 @@ double runThreadLatencyBench(
     const int interval_ns = 
             (int) ((1.0 / (double) desired_requests_per_second) * 1000000000. + 0.5);
 
-    struct timeval now = start;
-
     struct timespec next_interval;
     next_interval.tv_sec = start.tv_sec;
     next_interval.tv_nsec = start.tv_usec * 1000;
